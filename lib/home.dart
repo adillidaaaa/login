@@ -27,16 +27,15 @@ class _HomepageState extends State<Homepage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Center(
-              child: Text("USERNAME"),
+              child: Text(""),
             ),
-            const Padding(
-              padding: EdgeInsets.all(4.0),
-              child: TextField(
-                  decoration: InputDecoration(border: OutlineInputBorder())),
-            ),
-            const Center(child: Text("PASSWORD")),
             const TextField(
-              decoration: InputDecoration(border: OutlineInputBorder()),
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), hintText: "username")),
+            const Center(child: Text("")),
+            const TextField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(), hintText: "password"),
             ),
             ElevatedButton(
                 onPressed: () {
@@ -45,7 +44,8 @@ class _HomepageState extends State<Homepage> {
                       MaterialPageRoute(
                           builder: (context) => const Register()));
                 },
-                child: const Text("login"))
+                child: const Text("login")),
+            ElevatedButton(onPressed: () {}, child: const Text("signup"))
           ],
         ),
       ),
